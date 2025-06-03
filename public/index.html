@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Summarizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fab fa-youtube"></i> YouTube Video Summarizer</h1>
+            <p>Powered by Google's Gemini 2.0 Flash AI</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <form id="summarize-form">
+                    <div class="form-group">
+                        <label for="video-url">YouTube Video URL:</label>
+                        <input type="text" id="video-url" name="video-url" placeholder="https://www.youtube.com/watch?v=..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="custom-prompt">Custom Prompt (Optional):</label>
+                        <textarea id="custom-prompt" name="custom-prompt" placeholder="Please summarize the following video:"></textarea>
+                    </div>
+                    <button type="submit" id="submit-btn">
+                        <i class="fas fa-magic"></i> Generate Summary
+                    </button>
+                </form>
+            </section>
+
+            <section class="results-section" id="results-section">
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>Generating summary... This may take a minute.</p>
+                </div>
+                
+                <div class="results-container" id="results-container">
+                    <div class="video-container" id="video-container">
+                        <!-- Video thumbnail will be inserted here -->
+                    </div>
+                    <div class="summary-container">
+                        <h2>Summary</h2>
+                        <div id="summary-text"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 YouTube Video Summarizer | <a href="https://github.com/yourusername/genkit-youtube-summarizer" target="_blank">GitHub</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
